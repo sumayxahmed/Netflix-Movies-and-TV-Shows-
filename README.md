@@ -49,59 +49,35 @@ We will be focusing on 4 key requirements:
 
 ## Hypotheses and Validation
 
-**H1: More content is added in December than other months**
-- **Validation**: Count content additions by month using `month_added` feature
-- **Visual**: Bar chart showing content count per month
-- **Test**: Compare December count vs other months
+To support the business objectives outlined above, the following testable hypotheses were developed:
 
-**H2: Movies are longer than 90 minutes on average**
-- **Validation**: Calculate mean duration for movies using `duration_mins` 
-- **Visual**: Histogram of movie durations with 90-minute reference line
-- **Test**: Check if mean > 90 minutes
+### 1. Temporal Patterns in Content Acquisition
+**Hypothesis 1**: Netflix has significantly increased the number of TV Shows added to its platform in recent years compared to Movies.
+- **Validation**: Compare TV Show vs Movie additions by year using `year_added` and `type` columns
+- **Visual**: Stacked bar chart showing content type distribution over time
+- **Test**: Calculate yearly ratios and identify if TV Show proportion has increased
+✅ *This supports identifying time-based trends in content strategy.*
 
-**H3: US produces the most content on Netflix**
-- **Validation**: Count content by country using `country` column
-- **Visual**: Horizontal bar chart of top 10 countries by content count
-- **Test**: Verify US has highest count
+### 2. Regional Content Distribution  
+**Hypothesis 2**: The United States accounts for the majority of Netflix content, followed by India and the United Kingdom.
+- **Validation**: Count content by country using `country` column and rank top producers
+- **Visual**: Horizontal bar chart of top 10 countries by content volume
+- **Test**: Verify US has highest count and India/UK are in top 3 positions
+✅ *This helps explore geographic priorities in content distribution.*
 
-Alternative country hypotheses you could use:
+### 3. Content Duration Preferences
+**Hypothesis 3**: Most Netflix movies have a runtime between 90 and 120 minutes.
+- **Validation**: Filter movies using `type` column and analyse `duration` distribution
+- **Visual**: Histogram of movie durations with 90-120 minute range highlighted
+- **Test**: Calculate percentage of movies within 90-120 minute range
+✅ *This helps identify optimal movie lengths based on existing trends.*
 
-**H3a: International content makes up more than 30% of Netflix catalogue**
-- **Validation**: Count US vs non-US content using `country` column
-- **Visual**: Pie chart showing US vs International content split
-- **Test**: Check if non-US content > 30%
-
-**H3b: India and United Kingdom are in the top 5 content-producing countries**
-- **Validation**: Rank countries by content count using `country` column
-- **Visual**: Bar chart of top 10 countries by content volume
-- **Test**: Verify India and UK appear in top 5 positions
-
-**H3c: More than 15% of content involves multiple countries**
-- **Validation**: Use `has_multiple_countries` feature (True/False values)
-- **Visual**: Donut chart showing single vs multi-country productions
-- **Test**: Check if multi-country content > 15%
-
-**H4: Drama is the most popular genre on Netflix**
+### 4. Genre Insights
+**Hypothesis 4**: Drama and International content are the most common genres on Netflix.
 - **Validation**: Split and count individual genres from `listed_in` column
 - **Visual**: Bar chart showing top 10 genres by frequency
-- **Test**: Check if Drama appears most frequently across all content
-
-Alternative genre hypotheses you could use:
-
-**H4a: Comedy appears in more than 20% of all Netflix content**
-- **Validation**: Count how many titles contain "Comedy" in `listed_in` column
-- **Visual**: Pie chart showing Comedy vs Other genres percentage
-- **Test**: Check if Comedy content > 20% of total
-
-**H4b: International content makes up more than half of Netflix genres**
-- **Validation**: Count titles with "International" in `listed_in` column
-- **Visual**: Donut chart showing International vs Domestic genre split
-- **Test**: Verify International genres > 50%
-
-**H4c: TV content has more diverse genres than Movies**
-- **Validation**: Compare unique genre count between Movies and TV Shows in `listed_in`
-- **Visual**: Side-by-side bar chart of genre diversity by content type
-- **Test**: Check if TV Shows have more unique genres than Movies
+- **Test**: Verify Drama and International appear in top 2 most frequent genres
+✅ *This supports understanding genre popularity and content planning.*
 
 ## How to use this repo
 
