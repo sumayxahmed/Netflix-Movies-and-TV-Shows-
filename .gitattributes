@@ -1,0 +1,8 @@
+# Override GitHub language detection for Jupyter notebooks
+*.ipynb linguist-language=Jupyter-Notebook
+*.csv linguist-vendored
+*.xlsx linguist-vendored
+*.pbix linguist-vendored
+Procfile linguist-vendored
+setup.sh linguist-vendored
+requirements.txt linguist-vendored
