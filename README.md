@@ -196,7 +196,7 @@ The analysis was structured using a layered approach:
 ## Ethical Considerations
 
 ### Data Privacy and Legal Compliance:
-- **Public Dataset**: Utilized publicly available Netflix dataset from Kaggle with appropriate licensing
+- **Public Dataset**: Utilised publicly available Netflix dataset from Kaggle with appropriate licensing
 - **No Personal Data**: Analysis focused on content metadata without user personal information
 - **Attribution**: Proper crediting of data sources and methodologies
 
