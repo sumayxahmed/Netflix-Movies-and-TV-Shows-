@@ -34,9 +34,9 @@ The project addresses four strategic business requirements for Netflix content a
 
 1. **Analyse temporal patterns in Netflix content acquisition** - Investigate how content addition trends have evolved over time and identify seasonal patterns for strategic planning.
 
-2. **Examine regional content distribution and strategy** - Explore how Netflix's content varies across different countries and regions to optimize global content strategy.
+2. **Examine regional content distribution and strategy** - Explore how Netflix's content varies across different countries and regions to optimise global content strategy.
 
-3. **Investigate content duration preferences and patterns** - Analyse movie runtime trends and TV show season patterns to understand viewer preferences and content optimization.
+3. **Investigate content duration preferences and patterns** - Analyse movie runtime trends and TV show season patterns to understand viewer preferences and content optimisation.
 
 4. **Identify content categorisation and genre insights** - Examine genre distribution, popularity trends, and content classification patterns for strategic content acquisition and recommendation system enhancement.
 
@@ -50,14 +50,14 @@ The Netflix Content Analysis project serves multiple stakeholder groups with dis
 - **As a VP of Strategy**, I want to analyze content type trends (Movies vs TV Shows) so that I can align our content portfolio with viewer preferences and industry shifts.
 
 ### Content Acquisition Team
-- **As a Content Acquisition Manager**, I want to see the most popular genres so that I can prioritize negotiations with content creators in high-demand categories.
+- **As a Content Acquisition Manager**, I want to see the most popular genres so that I can prioritise negotiations with content creators in high-demand categories.
 - **As a Market Analyst**, I want to understand movie duration preferences so that I can provide guidance on optimal content length for acquisitions.
 - **As a Content Strategist**, I want to identify content rating distributions so that I can ensure balanced portfolio coverage across different audience segments.
 
 ### Data Science & Analytics Team
-- **As a Data Scientist**, I want to access machine learning predictions for content classification so that I can automate content categorization processes.
+- **As a Data Scientist**, I want to access machine learning predictions for content classification so that I can automate content categorisation processes.
 - **As a Business Analyst**, I want to validate statistical hypotheses about content trends so that I can provide evidence-based recommendations to stakeholders.
-- **As an Analytics Engineer**, I want to understand feature importance in content prediction models so that I can optimize data collection and processing pipelines.
+- **As an Analytics Engineer**, I want to understand feature importance in content prediction models so that I can optimise data collection and processing pipelines.
 
 ### Product & Recommendation Teams
 - **As a Recommendation Algorithm Developer**, I want to understand genre popularity patterns so that I can improve content suggestion accuracy for users.
@@ -65,13 +65,13 @@ The Netflix Content Analysis project serves multiple stakeholder groups with dis
 - **As a UX Researcher**, I want to analyze content characteristics so that I can design better content discovery interfaces.
 
 ### International Operations
-- **As an International Expansion Manager**, I want to see country-wise content distribution so that I can develop localization strategies for new markets.
+- **As an International Expansion Manager**, I want to see country-wise content distribution so that I can develop localisation strategies for new markets.
 - **As a Regional Content Manager**, I want to understand local vs international content ratios so that I can balance global appeal with regional preferences.
 
-### User Acceptance Criteria
-- **Dashboard Performance**: All visualizations load within 3 seconds for optimal user experience
+- **User Acceptance Criteria**
+- **Dashboard Performance**: All visualisations load within 3 seconds for optimal user experience
 - **Data Accuracy**: Statistical analyses include confidence intervals and significance testing for reliable insights
-- **Interactive Functionality**: Users can filter by date ranges, countries, and content types for customized analysis
+- **Interactive Functionality**: Users can filter by date ranges, countries, and content types for customised analysis
 - **Export Capability**: Key insights and data can be exported for presentations and further analysis
 - **Mobile Responsiveness**: Dashboard accessible on various devices for on-the-go decision making
 
@@ -81,27 +81,43 @@ To support the business objectives outlined above, the following testable hypoth
 
 ### 1. Temporal Patterns in Content Acquisition
 **Hypothesis 1**: Netflix has significantly increased the number of TV Shows added to its platform in recent years compared to Movies.
-- **Validation Method**: Statistical analysis comparing TV Show vs Movie additions by year using `year_added` and `type` columns
-- **Statistical Test**: Chi-square test for independence and proportion analysis
-- **Visualization**: Stacked bar chart showing content type distribution over time
-- **Results**: Validated through hypothesis testing in `jupyter_notebooks/hypothesis-testing.ipynb`
-*Supports identifying time-based trends in content strategy.*
+- **Validation Method**: Two-proportion z-test comparing TV Show vs Movie proportions between early years (≤2015) and recent years (>2015)
+- **Statistical Test**: Two-proportion z-test using `proportions_ztest` from statsmodels
+- **Null Hypothesis (H₀)**: No significant difference in TV Show proportion over time
+- **Alternative Hypothesis (H₁)**: Significant increase in TV Show proportion in recent years
+- **Visualisation**: Dual-line chart showing Movies vs TV Shows additions over time (2008-2021)
+- **Results**: Statistical validation with p-value < 0.05 confirming significant increase
+- **Implementation**: `jupyter_notebooks/hypothesis-testing.ipynb`
 
 ### 2. Regional Content Distribution  
-**Hypothesis 2**: The United States accounts for the majority of Netflix content, followed by India and the United Kingdom.
-- **Validation Method**: Statistical analysis of content distribution by country using `country` column
-- **Statistical Test**: Proportion test and descriptive statistics
-- **Visualization**: Horizontal bar chart of top 10 countries by content volume
-- **Results**: Statistical validation confirms geographic content priorities
-*Helps explore geographic priorities in content distribution strategy.*
+**Hypothesis 2**: The United States accounts for the majority (>50%) of Netflix content, followed by India and the United Kingdom in the top 3.
+- **Validation Method**: Proportion test for US majority + descriptive analysis for top 3 ranking
+- **Statistical Test**: One-proportion z-test for US majority using `proportions_ztest`
+- **Null Hypothesis (H₀)**: US does not account for majority OR India/UK not in top 3
+- **Alternative Hypothesis (H₁)**: US accounts for >50% AND India/UK are in top 3
+- **Visualisation**: Horizontal bar chart of top 10 countries by content volume
+- **Results**: Statistical validation of geographic content distribution patterns
+- **Implementation**: Country frequency analysis with proportion testing
 
 ### 3. Content Duration Preferences
 **Hypothesis 3**: Most Netflix movies have a runtime between 90 and 120 minutes.
-- **Validation Method**: Statistical analysis of movie duration distribution using `type` and `duration` columns
-- **Statistical Test**: Descriptive statistics and confidence interval analysis
-- **Visualization**: Histogram of movie durations with 90-120 minute range highlighted
-- **Results**: Statistical evidence supports optimal movie length identification
-*Identifies optimal movie lengths based on existing content trends.*
+- **Validation Method**: One-proportion z-test to check if >50% of movies fall in 90-120 minute range
+- **Statistical Test**: One-proportion z-test using `proportions_ztest`
+- **Null Hypothesis (H₀)**: ≤50% of movies are in 90-120 minute range
+- **Alternative Hypothesis (H₁)**: >50% of movies are in 90-120 minute range
+- **Visualisation**: Histogram of movie duration categories with 90-120 minute range highlighted
+- **Results**: Statistical evidence for optimal movie length validation
+- **Implementation**: Duration filtering and proportion calculation for movies only
+
+### 4. Genre Insights
+**Hypothesis 4**: Drama and International content are the most common genres on Netflix.
+- **Validation Method**: Chi-square goodness of fit test for genre frequency analysis
+- **Statistical Test**: Chi-square test using `chisquare` from scipy.stats
+- **Null Hypothesis (H₀)**: Drama and International are NOT the top 2 most common genres
+- **Alternative Hypothesis (H₁)**: Drama and International content are the most common genres
+- **Visualisation**: Bar chart showing top 10 individual genres by frequency
+- **Results**: Genre frequency ranking with statistical significance testing
+- **Implementation**: Genre parsing from `listed_in` column with frequency analysis
 
 ### 4. Genre Insights
 **Hypothesis 4**: Drama and International content are the most common genres on Netflix.
@@ -143,7 +159,7 @@ The project follows a comprehensive data science methodology encompassing the co
 |----------------------|-------------------|-----------|
 | **Temporal Content Patterns** | Time series charts, stacked bar charts | Effectively shows trends over time and enables pattern identification for strategic planning |
 | **Regional Distribution Analysis** | Geographic maps, horizontal bar charts | Provides clear geographic insights and country-wise content comparison for market strategy |
-| **Duration Preference Analysis** | Histograms, box plots | Statistical distribution visualization enables optimal content length identification |
+| **Duration Preference Analysis** | Histograms, box plots | Statistical distribution visualisation enables optimal content length identification |
 | **Genre Insights** | Bar charts, treemaps, pie charts | Hierarchical and comparative visualization of genre popularity for content acquisition strategy |
 
 ## Analysis Techniques Used
@@ -187,7 +203,7 @@ The analysis was structured using a layered approach:
 ### Bias and Fairness Issues:
 - **Geographic Bias**: Acknowledged potential Western content bias in dataset
 - **Temporal Bias**: Considered historical data limitations when making future recommendations
-- **Genre Bias**: Recognized potential classification bias in genre categorization
+- **Genre Bias**: Recognised potential classification bias in genre categorisation
 
 ### Mitigation Strategies:
 - **Transparent Methodology**: Documented all analytical decisions and limitations
@@ -224,6 +240,8 @@ The Power BI dashboard provides comprehensive Netflix content analysis through i
 - **Executive Level**: High-level KPIs with clear business impact metrics and trend visualization
 - **Strategic Teams**: Detailed content distribution analysis with country and genre breakdowns
 - **Operational Teams**: Actionable insights with specific recommendations and implementation guidance
+
+## Due to limitations with the version of PowerBI being used, a link cannot be provided, however, a file is available in Dashboards folder labelled Netflix-Movies-and-TV-Shows
 
 ## Unfixed Bugs
 
