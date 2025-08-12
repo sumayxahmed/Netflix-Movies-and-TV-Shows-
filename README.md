@@ -65,7 +65,7 @@ The Netflix Content Analysis project serves multiple stakeholder groups with dis
 ### Executive Leadership
 - **As a Chief Content Officer**, I want to understand global content acquisition trends so that I can make strategic decisions about budget allocation and content investment priorities.
 - **As a Regional Director**, I want to see content distribution by country so that I can identify market gaps and expansion opportunities in underrepresented regions.
-- **As a VP of Strategy**, I want to analyze content type trends (Movies vs TV Shows) so that I can align our content portfolio with viewer preferences and industry shifts.
+- **As a VP of Strategy**, I want to analyse content type trends (Movies vs TV Shows) so that I can align our content portfolio with viewer preferences and industry shifts.
 
 ### Content Acquisition Team
 - **As a Content Acquisition Manager**, I want to see the most popular genres so that I can prioritise negotiations with content creators in high-demand categories.
@@ -80,7 +80,7 @@ The Netflix Content Analysis project serves multiple stakeholder groups with dis
 ### Product & Recommendation Teams
 - **As a Recommendation Algorithm Developer**, I want to understand genre popularity patterns so that I can improve content suggestion accuracy for users.
 - **As a Product Manager**, I want to see temporal content trends so that I can plan feature releases aligned with content availability patterns.
-- **As a UX Researcher**, I want to analyze content characteristics so that I can design better content discovery interfaces.
+- **As a UX Researcher**, I want to analyse content characteristics so that I can design better content discovery interfaces.
 
 ### International Operations
 - **As an International Expansion Manager**, I want to see country-wise content distribution so that I can develop localisation strategies for new markets.
@@ -141,7 +141,7 @@ To support the business objectives outlined above, the following testable hypoth
 **Hypothesis 4**: Drama and International content are the most common genres on Netflix.
 - **Validation Method**: Genre frequency analysis by parsing `listed_in` column
 - **Statistical Test**: Frequency analysis and chi-square goodness of fit test
-- **Visualization**: Bar chart showing top 10 genres by frequency
+- **Visualisation**: Bar chart showing top 10 genres by frequency
 - **Results**: Statistical validation of genre popularity rankings
 ✅ *Supports understanding genre popularity for content planning.*
 
@@ -173,12 +173,12 @@ The project follows a comprehensive data science methodology encompassing the co
 
 ## The Rationale to Map Business Requirements to Data Visualizations
 
-| Business Requirement | Data Visualization | Rationale |
+| Business Requirement | Data Visualisation | Rationale |
 |----------------------|-------------------|-----------|
 | **Temporal Content Patterns** | Time series charts, stacked bar charts | Effectively shows trends over time and enables pattern identification for strategic planning |
 | **Regional Distribution Analysis** | Geographic maps, horizontal bar charts | Provides clear geographic insights and country-wise content comparison for market strategy |
 | **Duration Preference Analysis** | Histograms, box plots | Statistical distribution visualisation enables optimal content length identification |
-| **Genre Insights** | Bar charts, treemaps, pie charts | Hierarchical and comparative visualization of genre popularity for content acquisition strategy |
+| **Genre Insights** | Bar charts, treemaps, pie charts | Hierarchical and comparative visualisation of genre popularity for content acquisition strategy |
 
 ## Analysis Techniques Used
 
@@ -198,18 +198,18 @@ The analysis was structured using a layered approach:
 2. **Feature Layer**: Engineering meaningful derived variables
 3. **Analysis Layer**: Statistical testing and hypothesis validation
 4. **Prediction Layer**: Machine learning model implementation
-5. **Visualization Layer**: Business intelligence dashboard creation
+5. **Visualisation Layer**: Business intelligence dashboard creation
 
 ### Data Limitations and Alternative Approaches:
 - **Missing Data**: Implemented robust imputation strategies for categorical and numerical variables
 - **Categorical Complexity**: Used advanced encoding techniques for multi-valued categorical features
-- **Scale Differences**: Applied standardization and normalization for machine learning models
+- **Scale Differences**: Applied standardisation and normalisation for machine learning models
 - **Temporal Gaps**: Addressed missing temporal data through interpolation and trend analysis
 
 ### Generative AI Tools Usage:
 - **Ideation**: Used AI assistance for feature engineering ideas and statistical test selection
-- **Design Thinking**: AI-supported approach to dashboard layout and user experience optimization  
-- **Code Optimization**: Leveraged AI for code review, performance optimization, and best practices implementation
+- **Design Thinking**: AI-supported approach to dashboard layout and user experience optimisation  
+- **Code Optimisation**: Leveraged AI for code review, performance optimisation, and best practices implementation
 
 ## Ethical Considerations
 
@@ -225,7 +225,7 @@ The analysis was structured using a layered approach:
 
 ### Mitigation Strategies:
 - **Transparent Methodology**: Documented all analytical decisions and limitations
-- **Statistical Validation**: Used robust statistical testing to minimize interpretation bias
+- **Statistical Validation**: Used robust statistical testing to minimise interpretation bias
 - **Multiple Perspectives**: Considered various analytical approaches to validate findings
 
 ## Dashboard Design
@@ -255,7 +255,7 @@ The Power BI dashboard provides comprehensive Netflix content analysis through i
 - **Genre Focus**: International content and Drama categories drive content portfolio strategy
 
 ### Technical and Non-Technical Communication:
-- **Executive Level**: High-level KPIs with clear business impact metrics and trend visualization
+- **Executive Level**: High-level KPIs with clear business impact metrics and trend visualisation
 - **Strategic Teams**: Detailed content distribution analysis with country and genre breakdowns
 - **Operational Teams**: Actionable insights with specific recommendations and implementation guidance
 
@@ -276,7 +276,7 @@ The Power BI dashboard provides comprehensive Netflix content analysis through i
 ### Knowledge Gaps Addressed:
 - **Advanced Statistical Testing**: Enhanced understanding through additional research and implementation
 - **Power BI Advanced Features**: Continuous learning approach with incremental feature adoption
-- **Machine Learning Optimization**: Applied cross-validation and hyperparameter tuning techniques
+- **Machine Learning Optimisation**: Applied cross-validation and hyperparameter tuning techniques
 
 ## Development Roadmap
 
@@ -284,12 +284,12 @@ The Power BI dashboard provides comprehensive Netflix content analysis through i
 1. **Data Quality Issues**: Implemented comprehensive data validation and cleaning pipeline
 2. **Feature Engineering Complexity**: Developed systematic approach to meaningful feature creation
 3. **Statistical Validation**: Enhanced understanding of appropriate statistical tests for business hypotheses
-4. **Dashboard Performance**: Optimized data models and implemented efficient visualization techniques
+4. **Dashboard Performance**: Optimised data models and implemented efficient visualisation techniques
 
 ### Next Skills and Tools to Learn:
 - **Advanced ML Techniques**: Deep learning for content recommendation systems
 - **Real-time Analytics**: Stream processing for live content analysis
-- **Advanced Visualization**: D3.js for custom interactive visualizations
+- **Advanced Visualisation**: D3.js for custom interactive visualisations
 - **Cloud Deployment**: Azure or AWS for scalable analytics solutions
 
 ## Deployment
@@ -329,7 +329,7 @@ rf_model.fit(X_train, y_train)
 
 ### Specialized Libraries:
 - **Jupyter Notebooks**: Interactive development environment for iterative analysis and hypothesis testing
-- **Power BI**: Business intelligence dashboard creation and interactive visualization development
+- **Power BI**: Business intelligence dashboard creation and interactive visualisation development
 
 ## Credits
 
@@ -341,7 +341,7 @@ rf_model.fit(X_train, y_train)
 ### Technical Implementation:
 - **Data Cleaning Techniques**: Adapted from pandas documentation and data science best practices
 - **Statistical Testing**: Methodology from academic statistical analysis resources
-- **Dashboard Design**: Power BI visualization best practices and user experience guidelines
+- **Dashboard Design**: Power BI visualisation best practices and user experience guidelines
 
 ### Educational Resources:
 - **Code Institute**: Data Analytics program curriculum and project structure guidance
