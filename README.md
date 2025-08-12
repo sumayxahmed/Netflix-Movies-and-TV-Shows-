@@ -40,6 +40,41 @@ The project addresses four strategic business requirements for Netflix content a
 
 4. **Identify content categorisation and genre insights** - Examine genre distribution, popularity trends, and content classification patterns for strategic content acquisition and recommendation system enhancement.
 
+## User Stories
+
+The Netflix Content Analysis project serves multiple stakeholder groups with distinct analytical needs and objectives:
+
+### Executive Leadership
+- **As a Chief Content Officer**, I want to understand global content acquisition trends so that I can make strategic decisions about budget allocation and content investment priorities.
+- **As a Regional Director**, I want to see content distribution by country so that I can identify market gaps and expansion opportunities in underrepresented regions.
+- **As a VP of Strategy**, I want to analyze content type trends (Movies vs TV Shows) so that I can align our content portfolio with viewer preferences and industry shifts.
+
+### Content Acquisition Team
+- **As a Content Acquisition Manager**, I want to see the most popular genres so that I can prioritize negotiations with content creators in high-demand categories.
+- **As a Market Analyst**, I want to understand movie duration preferences so that I can provide guidance on optimal content length for acquisitions.
+- **As a Content Strategist**, I want to identify content rating distributions so that I can ensure balanced portfolio coverage across different audience segments.
+
+### Data Science & Analytics Team
+- **As a Data Scientist**, I want to access machine learning predictions for content classification so that I can automate content categorization processes.
+- **As a Business Analyst**, I want to validate statistical hypotheses about content trends so that I can provide evidence-based recommendations to stakeholders.
+- **As an Analytics Engineer**, I want to understand feature importance in content prediction models so that I can optimize data collection and processing pipelines.
+
+### Product & Recommendation Teams
+- **As a Recommendation Algorithm Developer**, I want to understand genre popularity patterns so that I can improve content suggestion accuracy for users.
+- **As a Product Manager**, I want to see temporal content trends so that I can plan feature releases aligned with content availability patterns.
+- **As a UX Researcher**, I want to analyze content characteristics so that I can design better content discovery interfaces.
+
+### International Operations
+- **As an International Expansion Manager**, I want to see country-wise content distribution so that I can develop localization strategies for new markets.
+- **As a Regional Content Manager**, I want to understand local vs international content ratios so that I can balance global appeal with regional preferences.
+
+### User Acceptance Criteria
+- **Dashboard Performance**: All visualizations load within 3 seconds for optimal user experience
+- **Data Accuracy**: Statistical analyses include confidence intervals and significance testing for reliable insights
+- **Interactive Functionality**: Users can filter by date ranges, countries, and content types for customized analysis
+- **Export Capability**: Key insights and data can be exported for presentations and further analysis
+- **Mobile Responsiveness**: Dashboard accessible on various devices for on-the-go decision making
+
 ## Hypothesis and How to Validate
 
 To support the business objectives outlined above, the following testable hypotheses were developed and validated through statistical analysis:
@@ -50,7 +85,7 @@ To support the business objectives outlined above, the following testable hypoth
 - **Statistical Test**: Chi-square test for independence and proportion analysis
 - **Visualization**: Stacked bar chart showing content type distribution over time
 - **Results**: Validated through hypothesis testing in `jupyter_notebooks/hypothesis-testing.ipynb`
-✅ *Supports identifying time-based trends in content strategy.*
+*Supports identifying time-based trends in content strategy.*
 
 ### 2. Regional Content Distribution  
 **Hypothesis 2**: The United States accounts for the majority of Netflix content, followed by India and the United Kingdom.
@@ -58,7 +93,7 @@ To support the business objectives outlined above, the following testable hypoth
 - **Statistical Test**: Proportion test and descriptive statistics
 - **Visualization**: Horizontal bar chart of top 10 countries by content volume
 - **Results**: Statistical validation confirms geographic content priorities
-✅ *Helps explore geographic priorities in content distribution strategy.*
+*Helps explore geographic priorities in content distribution strategy.*
 
 ### 3. Content Duration Preferences
 **Hypothesis 3**: Most Netflix movies have a runtime between 90 and 120 minutes.
@@ -66,7 +101,7 @@ To support the business objectives outlined above, the following testable hypoth
 - **Statistical Test**: Descriptive statistics and confidence interval analysis
 - **Visualization**: Histogram of movie durations with 90-120 minute range highlighted
 - **Results**: Statistical evidence supports optimal movie length identification
-✅ *Identifies optimal movie lengths based on existing content trends.*
+*Identifies optimal movie lengths based on existing content trends.*
 
 ### 4. Genre Insights
 **Hypothesis 4**: Drama and International content are the most common genres on Netflix.
@@ -162,36 +197,32 @@ The analysis was structured using a layered approach:
 ## Dashboard Design
 
 ### Dashboard Architecture:
-The Power BI dashboard consists of multiple interconnected pages designed for different stakeholder needs:
+The Power BI dashboard provides comprehensive Netflix content analysis through interactive visualizations designed for strategic decision-making:
 
-#### Page 1: Executive Summary Dashboard
-- **KPI Cards**: Total content count, movies vs TV shows ratio, average content age
-- **Time Series Chart**: Content addition trends over years
-- **Geographic Map**: Global content distribution visualization
-- **Target Audience**: C-level executives and strategic decision makers
+#### Netflix Content Overview Dashboard
+- **KPI Cards**: 
+  - Total Netflix Titles: 8,808
+  - Global Markets: 751
+  - Movies: 6,131
+  - TV Shows: 2,676
+- **Content Acquisition Growth**: Line chart showing Netflix content acquisition trends (2008-2021) with dramatic growth starting around 2014
+- **Top Countries by Content Volume**: Horizontal bar chart displaying content distribution with United States leading, followed by India, United Kingdom, and other major markets
+- **Content Type Trends**: Dual-line chart comparing Movies vs TV Shows additions over time (2008-2021), showing the shift toward TV show content in recent years
+- **Content Rating Distribution**: Pie chart breaking down content by rating categories (TV-MA, TV-14, R, PG-13, etc.)
+- **Most Popular Content Genres**: Comprehensive bar chart showing genre frequency with International Movies and Dramas leading the distribution
+- **Movie Length Distribution**: Histogram displaying movie duration categories (Long, Standard, Very Long, Short) with Standard length being most common
+- **Interactive Filters**: Year range slider (2008-2021) and country selection filters for dynamic analysis
+- **Target Audience**: Content strategy teams, executives, and market analysts
 
-#### Page 2: Content Analysis Deep Dive
-- **Duration Analysis**: Movie runtime distribution and TV show season analysis
-- **Genre Breakdown**: Interactive treemap of genre popularity
-- **Rating Distribution**: Content rating category analysis
-- **Filter Controls**: Year, country, content type, and genre filters
-- **Target Audience**: Content acquisition and strategy teams
-
-#### Page 3: Predictive Analytics Dashboard
-- **ML Model Results**: Content type prediction accuracy and feature importance
-- **Rating Prediction**: Automated content rating classification results
-- **Feature Impact Analysis**: Statistical significance of content characteristics
-- **Target Audience**: Data science and analytics teams
-
-#### Page 4: Regional Strategy Dashboard
-- **Country Performance**: Content volume by region with drill-down capability
-- **Market Analysis**: Temporal trends by geographic regions
-- **Content Gap Analysis**: Identification of underrepresented regions
-- **Target Audience**: International expansion and regional strategy teams
+### Key Dashboard Insights:
+- **Growth Pattern**: Exponential content growth from 2014-2019 with peak acquisition around 2018-2019
+- **Geographic Strategy**: Strong US content dominance with significant international diversification
+- **Content Mix Evolution**: Clear shift from movie-focused to balanced movie/TV show strategy
+- **Genre Focus**: International content and Drama categories drive content portfolio strategy
 
 ### Technical and Non-Technical Communication:
-- **Executive Level**: High-level KPIs with clear business impact metrics
-- **Technical Teams**: Detailed statistical analysis with confidence intervals and significance testing
+- **Executive Level**: High-level KPIs with clear business impact metrics and trend visualization
+- **Strategic Teams**: Detailed content distribution analysis with country and genre breakdowns
 - **Operational Teams**: Actionable insights with specific recommendations and implementation guidance
 
 ## Unfixed Bugs
