@@ -4,6 +4,24 @@
 
 Netflix Movies and TV Shows Analysis is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation of Netflix's content catalogue. The tool supports multiple data analysis techniques and provides actionable business intelligence for both technical and non-technical stakeholders in content strategy and market analysis.
 
+## Table of Contents
+
+1. [Dataset Content](#dataset-content)
+2. [Business Requirements](#business-requirements)
+3. [User Stories](#user-stories)
+4. [Hypothesis and How to Validate](#hypothesis-and-how-to-validate)
+5. [Project Plan](#project-plan)
+6. [The Rationale to Map Business Requirements to Data Visualizations](#the-rationale-to-map-business-requirements-to-data-visualizations)
+7. [Analysis Techniques Used](#analysis-techniques-used)
+8. [Ethical Considerations](#ethical-considerations)
+9. [Dashboard Design](#dashboard-design)
+10. [Unfixed Bugs](#unfixed-bugs)
+11. [Development Roadmap](#development-roadmap)
+12. [Deployment](#deployment)
+13. [Main Data Analysis Libraries](#main-data-analysis-libraries)
+14. [Credits](#credits)
+15. [Acknowledgements](#acknowledgements)
+
 ## Dataset Content
 
 The project utilises the Netflix Movies and TV Shows dataset from Kaggle, containing detailed information about Netflix's content catalogue. The dataset has been carefully selected with a reasonable size to avoid exceeding repository limits while providing comprehensive insights.
