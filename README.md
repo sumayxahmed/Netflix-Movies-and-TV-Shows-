@@ -327,7 +327,7 @@ rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 ```
 
-### Specialized Libraries:
+### Specialised Libraries:
 - **Jupyter Notebooks**: Interactive development environment for iterative analysis and hypothesis testing
 - **Power BI**: Business intelligence dashboard creation and interactive visualisation development
 
@@ -336,8 +336,8 @@ rf_model.fit(X_train, y_train)
 ### Content
 - **ChatGPT**: Supported with code guidance, data exploration ideas, markdown writing, and error troubleshooting
 - **GitHub Copilot**: Assisted with syntax and repetitive code blocks during Python scripting
-- **Kaggle**: For providing the Netflix Movies and TV Shows dataset
-- **Code Institute**: For the project structure and teamwork framework
+- **Kaggle**: Netflix Movies and TV Shows dataset https://www.kaggle.com/datasets/shivamb/netflix-shows/code?datasetId=434238
+- **Code Institute**: For project structure and guidance 
 
 ## Acknowledgements
 
