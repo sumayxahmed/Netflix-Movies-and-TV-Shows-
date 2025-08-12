@@ -333,20 +333,11 @@ rf_model.fit(X_train, y_train)
 
 ## Credits
 
-### Content Sources:
-- **Dataset**: Netflix Movies and TV Shows Dataset from [Kaggle](https://www.kaggle.com/shivamb/netflix-shows)
-- **Statistical Methods**: Hypothesis testing methodologies from statistical analysis best practices
-- **Machine Learning Techniques**: Implementation guidance from scikit-learn documentation and best practices
-
-### Technical Implementation:
-- **Data Cleaning Techniques**: Adapted from pandas documentation and data science best practices
-- **Statistical Testing**: Methodology from academic statistical analysis resources
-- **Dashboard Design**: Power BI visualisation best practices and user experience guidelines
-
-### Educational Resources:
-- **Code Institute**: Data Analytics program curriculum and project structure guidance
-- **Statistical Analysis**: Academic resources for hypothesis testing and validation methodologies
-- **Machine Learning**: Industry best practices for model development and evaluation
+### Content
+- **ChatGPT**: Supported with code guidance, data exploration ideas, markdown writing, and error troubleshooting
+- **GitHub Copilot**: Assisted with syntax and repetitive code blocks during Python scripting
+- **Kaggle**: For providing the Netflix Movies and TV Shows dataset
+- **Code Institute**: For the project structure and teamwork framework
 
 ## Acknowledgements
 
